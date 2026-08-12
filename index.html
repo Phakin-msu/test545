@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>THE LAST FRONTIER - ภาพยนตร์ไซไฟแห่งปี</title>
+    <title>รายการภาพยนตร์ 20 เรื่อง</title>
     <style>
-        /* Global Styles */
         * {
             margin: 0;
             padding: 0;
@@ -13,184 +12,160 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         body {
-            background-color: #0b0c10;
+            background-color: #0f1016;
             color: #ffffff;
-            line-height: 1.6;
+            padding: 40px 20px;
         }
-
-        /* Hero Section */
-        .hero {
-            position: relative;
-            height: 90vh;
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(11, 12, 16, 1)), 
-                        url('https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .header-title {
             text-align: center;
-            padding: 0 20px;
-        }
-        .hero-content {
-            max-width: 800px;
-        }
-        .hero h1 {
-            font-size: 3.5rem;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            color: #66fcf1;
-            margin-bottom: 10px;
-        }
-        .hero p {
-            font-size: 1.2rem;
-            color: #c5c6c7;
-            margin-bottom: 25px;
-        }
-        .btn {
-            display: inline-block;
-            padding: 12px 30px;
-            background-color: #45a29e;
-            color: #ffffff;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 5px;
-            transition: background 0.3s ease;
-        }
-        .btn:hover {
-            background-color: #66fcf1;
-            color: #0b0c10;
-        }
-
-        /* Container Section */
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 60px 20px;
-        }
-
-        /* Synopsis & Media Section */
-        .grid-2 {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            align-items: center;
-        }
-        .poster img {
-            width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
-        }
-        .synopsis h2 {
             font-size: 2rem;
-            color: #66fcf1;
-            margin-bottom: 15px;
+            margin-bottom: 30px;
+            color: #00d2d3;
         }
-
-        /* Cast Section */
-        .cast-section {
-            margin-top: 80px;
-        }
-        .section-title {
-            text-align: center;
-            font-size: 2.2rem;
-            color: #66fcf1;
-            margin-bottom: 40px;
-        }
-        .cast-grid {
+        /* จัดเรียงแบบ Grid responsive */
+        .movie-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 25px;
+            max-width: 1300px;
+            margin: 0 auto;
         }
-        .cast-card {
-            background-color: #1f2833;
-            border-radius: 8px;
+        /* ตัวการ์ดหนัง */
+        .movie-card {
+            background-color: #1e1f29;
+            border-radius: 12px;
             overflow: hidden;
-            text-align: center;
-            padding-bottom: 15px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
         }
-        .cast-card img {
+        .movie-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 20px rgba(0, 210, 211, 0.3);
+        }
+        .movie-card img {
             width: 100%;
-            height: 250px;
+            height: 270px;
             object-fit: cover;
+            display: block;
         }
-        .cast-card h3 {
-            margin-top: 15px;
-            font-size: 1.1rem;
-        }
-        .cast-card p {
-            color: #c5c6c7;
-            font-size: 0.9rem;
-        }
-
-        /* Footer */
-        footer {
+        .movie-title {
+            padding: 12px 10px;
+            font-size: 0.95rem;
+            font-weight: 600;
             text-align: center;
-            padding: 30px;
-            background-color: #050608;
-            color: #c5c6c7;
-            font-size: 0.9rem;
-            margin-top: 60px;
+            color: #f1f1f1;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
     </style>
 </head>
 <body>
 
-    <!-- Hero / Header Banner -->
-    <header class="hero">
-        <div class="hero-content">
-            <h1>THE LAST FRONTIER</h1>
-            <p>การเดินทางสู่อวกาศไร้ขอบเขต เพื่อค้นหาความหวังสุดท้ายของมนุษยชาติ</p>
-            <a href="#trailer" class="btn">รับชมตัวอย่างหนัง</a>
+    <h1 class="header-title">ภาพยนตร์มาแรง</h1>
+
+    <div class="movie-grid">
+        <!-- เรื่องที่ 1 -->
+        <div class="movie-card">
+            <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=500&q=80" alt="The Last Frontier">
+            <div class="movie-title">The Last Frontier</div>
         </div>
-    </header>
-
-    <!-- Main Content Container -->
-    <main class="container">
-        <!-- Synopsis & Main Poster -->
-        <section class="grid-2">
-            <div class="poster">
-                <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80" alt="โปสเตอร์หนัง">
-            </div>
-            <div class="synopsis">
-                <h2>เรื่องย่อ (Synopsis)</h2>
-                <p>เมื่อทรัพยากรบนโลกกำลังจะหมดลง ทีมนักสำรวจจึงต้องออกเดินทางข้ามกาแล็กซีผ่านรูหนอนปริศนา เพื่อค้นหาดาวเคราะห์ดวงใหม่ที่มนุษย์สามารถอยู่อาศัยได้ แต่สิ่งที่พวกเขารอคอยอยู่นั้น อาจไม่ใช่แค่ความหวัง... แต่อาจเป็นจุดจบของห้วงอวกาศ</p>
-                <br>
-                <p><strong>กำหนดฉาย:</strong> 25 ธันวาคมนี้ ในโรงภาพยนตร์เท่านั้น</p>
-                <p><strong>ระบบที่รองรับ:</strong> IMAX, 4DX, Digital 2D</p>
-            </div>
-        </section>
-
-        <!-- Cast Section -->
-        <section class="cast-section">
-            <h2 class="section-title">นักแสดงนำ</h2>
-            <div class="cast-grid">
-                <div class="cast-card">
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80" alt="นักแสดง 1">
-                    <h3>John Doe</h3>
-                    <p>รับบท กัปตัน อเล็กซ์</p>
-                </div>
-                <div class="cast-card">
-                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80" alt="นักแสดง 2">
-                    <h3>Jane Smith</h3>
-                    <p>รับบท ดร. เอเลนา</p>
-                </div>
-                <div class="cast-card">
-                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80" alt="นักแสดง 3">
-                    <h3>Michael Brown</h3>
-                    <p>รับบท ผู้บังคับการ เดวิด</p>
-                </div>
-                <div class="cast-card">
-                    <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80" alt="นักแสดง 4">
-                    <h3>Sarah Connor</h3>
-                    <p>รับบท วิศวกร ลูซี่</p>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2026 THE LAST FRONTIER Movie. All Rights Reserved.</p>
-    </footer>
+        <!-- เรื่องที่ 2 -->
+        <div class="movie-card">
+            <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=500&q=80" alt="Deep Space">
+            <div class="movie-title">Deep Space</div>
+        </div>
+        <!-- เรื่องที่ 3 -->
+        <div class="movie-card">
+            <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=500&q=80" alt="Cyber City 2099">
+            <div class="movie-title">Cyber City 2099</div>
+        </div>
+        <!-- เรื่องที่ 4 -->
+        <div class="movie-card">
+            <img src="https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=500&q=80" alt="Shadow Warrior">
+            <div class="movie-title">Shadow Warrior</div>
+        </div>
+        <!-- เรื่องที่ 5 -->
+        <div class="movie-card">
+            <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=500&q=80" alt="The Lost Kingdom">
+            <div class="movie-title">The Lost Kingdom</div>
+        </div>
+        <!-- เรื่องที่ 6 -->
+        <div class="movie-card">
+            <img src="https://images.unsplash.com/photo-1508739773434-c26b3d09e071?auto=format&fit=crop&w=500&q=80" alt="Silent Horizon">
+            <div class="movie-title">Silent Horizon</div>
+        </div>
+        <!-- เรื่องที่ 7 -->
+        <div class="movie-card">
+            <img src="https://images.unsplash.com/photo-1511447333015-45b65e60f6d5?auto=format&fit=crop&w=500&q=80" alt="Neon Nights">
+            <div class="movie-title">Neon Nights</div>
+        </div>
+        <!-- เรื่องที่ 8 -->
+        <div class="movie-card">
+            <img src="https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=500&q=80" alt="Dark Waters">
+            <div class="movie-title">Dark Waters</div>
+        </div>
+        <!-- เรื่องที่ 9 -->
+        <div class="movie-card">
+            <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=500&q=80" alt="Frozen Peak">
+            <div class="movie-title">Frozen Peak</div>
+        </div>
+        <!-- เรื่องที่ 10 -->
+        <div class="movie-card">
+            <img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=500&q=80" alt="Orbit X">
+            <div class="movie-title">Orbit X</div>
+        </div>
+        <!-- เรื่องที่ 11 -->
+        <div class="movie-card">
+            <img src="https://images.unsplash.com/photo-1518173946687-a4c8a383392e?auto=format&fit=crop&w=500&q=80" alt="Forest of Echoes">
+            <div class="movie-title">Forest of Echoes</div>
+        </div>
+        <!-- เรื่องที่ 12 -->
+        <div class="movie-card">
+            <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=500&q=80" alt="Wild Journey">
+            <div class="movie-title">Wild Journey</div>
+        </div>
+        <!-- เรื่องที่ 13 -->
+        <div class="movie-card">
+            <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=500&q=80" alt="The Observer">
+            <div class="movie-title">The Observer</div>
+        </div>
+        <!-- เรื่องที่ 14 -->
+        <div class="movie-card">
+            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=500&q=80" alt="Mist Valley">
+            <div class="movie-title">Mist Valley</div>
+        </div>
+        <!-- เรื่องที่ 15 -->
+        <div class="movie-card">
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=500&q=80" alt="Ocean Breeze">
+            <div class="movie-title">Ocean Breeze</div>
+        </div>
+        <!-- เรื่องที่ 16 -->
+        <div class="movie-card">
+            <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=500&q=80" alt="Summit">
+            <div class="movie-title">Summit</div>
+        </div>
+        <!-- เรื่องที่ 17 -->
+        <div class="movie-card">
+            <img src="https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=500&q=80" alt="Code Red">
+            <div class="movie-title">Code Red</div>
+        </div>
+        <!-- เรื่องที่ 18 -->
+        <div class="movie-card">
+            <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=500&q=80" alt="Nature Code">
+            <div class="movie-title">Nature Code</div>
+        </div>
+        <!-- เรื่องที่ 19 -->
+        <div class="movie-card">
+            <img src="https://images.unsplash.com/photo-1502134249126-9f3755a50d78?auto=format&fit=crop&w=500&q=80" alt="Starlight">
+            <div class="movie-title">Starlight</div>
+        </div>
+        <!-- เรื่องที่ 20 -->
+        <div class="movie-card">
+            <img src="https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?auto=format&fit=crop&w=500&q=80" alt="Galaxy Quest">
+            <div class="movie-title">Galaxy Quest</div>
+        </div>
+    </div>
 
 </body>
 </html>
