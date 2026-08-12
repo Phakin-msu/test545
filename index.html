@@ -2,161 +2,149 @@
 <html lang="th">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>รายการภาพยนตร์ 20 เรื่อง</title>
+    <title>สรุปข้อมูลผลงานทางวิชาการแยกตามรายปี</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
         body {
-            background-color: #0f1016;
-            color: #ffffff;
-            padding: 40px 20px;
+            font-family: 'Sarabun', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 0 20px;
         }
-        .header-title {
-            text-align: center;
-            font-size: 2rem;
-            margin-bottom: 30px;
-            color: #00d2d3;
+        h2 {
+            color: #1a365d;
+            border-bottom: 2px solid #2b6cb0;
+            padding-bottom: 8px;
+            margin-top: 30px;
         }
-        /* จัดเรียงแบบ Grid responsive */
-        .movie-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-            gap: 25px;
-            max-width: 1300px;
-            margin: 0 auto;
-        }
-        /* ตัวการ์ดหนัง */
-        .movie-card {
-            background-color: #1e1f29;
-            border-radius: 12px;
-            overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-        }
-        .movie-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 10px 20px rgba(0, 210, 211, 0.3);
-        }
-        .movie-card img {
+        table {
             width: 100%;
-            height: 270px;
-            object-fit: cover;
-            display: block;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.95em;
         }
-        .movie-title {
-            padding: 12px 10px;
-            font-size: 0.95rem;
+        th, td {
+            padding: 10px 14px;
+            text-align: left;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        th {
+            background-color: #2b6cb0;
+            color: white;
             font-weight: 600;
-            text-align: center;
-            color: #f1f1f1;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
+        }
+        tr:nth-child(even) {
+            background-color: #f7fafc;
+        }
+        .metric-card-container {
+            display: flex;
+            gap: 15px;
+            margin: 15px 0;
+        }
+        .metric-card {
+            flex: 1;
+            background: #ebf8ff;
+            border-left: 4px solid #3182ce;
+            padding: 12px 16px;
+            border-radius: 4px;
+        }
+        .metric-value {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #2b6cb0;
+        }
+        .metric-label {
+            font-size: 0.85em;
+            color: #4a5568;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 4px;
         }
     </style>
 </head>
 <body>
 
-    <h1 class="header-title">ภาพยนตร์มาแรง</h1>
+    <h2>ภาพรวมข้อมูลเปรียบเทียบรายปี</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>ปี พ.ศ. (ค.ศ.)</th>
+                <th>จำนวนผลงาน (บทความ)</th>
+                <th>การอ้างอิงรวม (Citations)</th>
+                <th>การอ้างอิงเฉลี่ย/เรื่อง</th>
+                <th>Open Access</th>
+                <th>Non-Open Access</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>2024</strong></td>
+                <td>300</td>
+                <td>2,884</td>
+                <td>9.61</td>
+                <td>162 (54.0%)</td>
+                <td>138 (46.0%)</td>
+            </tr>
+            <tr>
+                <td><strong>2025</strong></td>
+                <td>100</td>
+                <td>72</td>
+                <td>0.72</td>
+                <td>79 (79.0%)</td>
+                <td>21 (21.0%)</td>
+            </tr>
+            <tr>
+                <td><strong>รวมทั้งหมด</strong></td>
+                <td><strong>400</strong></td>
+                <td><strong>2,956</strong></td>
+                <td><strong>7.39</strong></td>
+                <td><strong>241 (60.25%)</strong></td>
+                <td><strong>159 (39.75%)</strong></td>
+            </tr>
+        </tbody>
+    </table>
 
-    <div class="movie-grid">
-        <!-- เรื่องที่ 1 -->
-        <div class="movie-card">
-            <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=500&q=80" alt="The Last Frontier">
-            <div class="movie-title">The Last Frontier</div>
-        </div>
-        <!-- เรื่องที่ 2 -->
-        <div class="movie-card">
-            <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=500&q=80" alt="Deep Space">
-            <div class="movie-title">Deep Space</div>
-        </div>
-        <!-- เรื่องที่ 3 -->
-        <div class="movie-card">
-            <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=500&q=80" alt="Cyber City 2099">
-            <div class="movie-title">Cyber City 2099</div>
-        </div>
-        <!-- เรื่องที่ 4 -->
-        <div class="movie-card">
-            <img src="https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=500&q=80" alt="Shadow Warrior">
-            <div class="movie-title">Shadow Warrior</div>
-        </div>
-        <!-- เรื่องที่ 5 -->
-        <div class="movie-card">
-            <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=500&q=80" alt="The Lost Kingdom">
-            <div class="movie-title">The Lost Kingdom</div>
-        </div>
-        <!-- เรื่องที่ 6 -->
-        <div class="movie-card">
-            <img src="https://images.unsplash.com/photo-1508739773434-c26b3d09e071?auto=format&fit=crop&w=500&q=80" alt="Silent Horizon">
-            <div class="movie-title">Silent Horizon</div>
-        </div>
-        <!-- เรื่องที่ 7 -->
-        <div class="movie-card">
-            <img src="https://images.unsplash.com/photo-1511447333015-45b65e60f6d5?auto=format&fit=crop&w=500&q=80" alt="Neon Nights">
-            <div class="movie-title">Neon Nights</div>
-        </div>
-        <!-- เรื่องที่ 8 -->
-        <div class="movie-card">
-            <img src="https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=500&q=80" alt="Dark Waters">
-            <div class="movie-title">Dark Waters</div>
-        </div>
-        <!-- เรื่องที่ 9 -->
-        <div class="movie-card">
-            <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=500&q=80" alt="Frozen Peak">
-            <div class="movie-title">Frozen Peak</div>
-        </div>
-        <!-- เรื่องที่ 10 -->
-        <div class="movie-card">
-            <img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=500&q=80" alt="Orbit X">
-            <div class="movie-title">Orbit X</div>
-        </div>
-        <!-- เรื่องที่ 11 -->
-        <div class="movie-card">
-            <img src="https://images.unsplash.com/photo-1518173946687-a4c8a383392e?auto=format&fit=crop&w=500&q=80" alt="Forest of Echoes">
-            <div class="movie-title">Forest of Echoes</div>
-        </div>
-        <!-- เรื่องที่ 12 -->
-        <div class="movie-card">
-            <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=500&q=80" alt="Wild Journey">
-            <div class="movie-title">Wild Journey</div>
-        </div>
-        <!-- เรื่องที่ 13 -->
-        <div class="movie-card">
-            <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=500&q=80" alt="The Observer">
-            <div class="movie-title">The Observer</div>
-        </div>
-        <!-- เรื่องที่ 14 -->
-        <div class="movie-card">
-            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=500&q=80" alt="Mist Valley">
-            <div class="movie-title">Mist Valley</div>
-        </div>
-        <!-- เรื่องที่ 15 -->
-        <div class="movie-card">
-            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=500&q=80" alt="Ocean Breeze">
-            <div class="movie-title">Ocean Breeze</div>
-        </div>
-        <!-- เรื่องที่ 16 -->
-        <div class="movie-card">
-            <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=500&q=80" alt="Summit">
-            <div class="movie-title">Summit</div>
-        </div>
-        <!-- เรื่องที่ 17 -->
-        <div class="movie-card">
-            <img src="https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=500&q=80" alt="Code Red">
-            <div class="movie-title">Code Red</div>
-        </div>
-        <!-- เรื่องที่ 18 -->
-        <div class="movie-card">
-            <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=500&q=80" alt="Nature Code">
-            <div class="movie-title">Nature Code</div>
-        </div>
-        
-    </div>
+    <h2>รายละเอียดปี 2024 (จำนวน 300 ผลงาน)</h2>
+    
+    <h3>1. ประเภทของผลงาน (Document Type)</h3>
+    <ul>
+        <li><strong>Conference paper:</strong> 148 เรื่อง (49.3%)</li>
+        <li><strong>Article:</strong> 127 เรื่อง (42.3%)</li>
+        <li><strong>Review:</strong> 14 เรื่อง (4.7%)</li>
+        <li><strong>Conference review:</strong> 6 เรื่อง (2.0%)</li>
+        <li><strong>Short survey:</strong> 3 เรื่อง (1.0%)</li>
+        <li><strong>อื่นๆ (Note, Editorial):</strong> 2 เรื่อง (0.7%)</li>
+    </ul>
+
+    <h3>2. แหล่งตีพิมพ์ 5 อันดับแรก (Top Source Titles)</h3>
+    <ol>
+        <li>ACM International Conference Proceeding Series (110 เรื่อง)</li>
+        <li>Neurocomputing (12 เรื่อง)</li>
+        <li>Mesopotamian Journal of Artificial Intelligence in Healthcare (12 เรื่อง)</li>
+        <li>Expert Systems with Applications (9 เรื่อง)</li>
+        <li>Proceedings of 25th Annual Conference on Information Technology Education, SIGITE 2024 (8 เรื่อง)</li>
+    </ol>
+
+    <h2>รายละเอียดปี 2025 (จำนวน 100 ผลงาน)</h2>
+    
+    <h3>1. ประเภทของผลงาน (Document Type)</h3>
+    <ul>
+        <li><strong>Article:</strong> 94 เรื่อง (94.0%)</li>
+        <li><strong>Conference paper:</strong> 6 เรื่อง (6.0%)</li>
+    </ul>
+
+    <h3>2. แหล่งตีพิมพ์ 5 อันดับแรก (Top Source Titles)</h3>
+    <ol>
+        <li>ShodhKosh: Journal of Visual and Performing Arts (16 เรื่อง)</li>
+        <li>International Journal of Advanced Computer Science and Applications (13 เรื่อง)</li>
+        <li>Proceedings of SPIE - The International Society for Optical Engineering (4 เรื่อง)</li>
+        <li>Chinese Journal of Vascular Surgery (3 เรื่อง)</li>
+        <li>Contemporary Economics (3 เรื่อง)</li>
+    </ol>
 
 </body>
 </html>
